@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Log in </title>
+  <title>T</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,16 +20,14 @@
   <main>
     <div class="container">
         <form action="" method="POST">
-            {% csrf_token%}
-            <br><br>
-            <h1>Log in</h1><br>
-            <label for="">Username</label><br><input type="text" name="uname"><br>
-            <label for="">password</label><br><input type="text" name="psw"><br><br>
-            <input type="submit" value="Log in">
-            <br>
-            <br>
-            <br>
-            <a href="studregform">student registration</a><br>
+            {% csrf_token %}
+            <label for="">First_name</label><input type="text" name="f_name"><br>
+            <label for="">Last_name</label><input type="text" name="l_name"><br>
+            <label for="">Email</label><input type="email" name="email"><br>
+            <label for="">Username</label><input type="text" name="u_name"><br>
+            <label for="">Password</label><input type="password" name="password"><br>
+            <label for="">Phone</label><input type="text" name="phone"><br>
+            <input type="submit" value="Register">
         </form>
     </div>
 

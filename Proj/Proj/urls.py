@@ -20,5 +20,9 @@ from School import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('log',views.log)
+    path('',views.log),
+    path('studregform',views.studregform),
+    path('studlist',views.registeredstudents),
+    path('studapp/<int:id>',views.studapprove),
+    path('regteach',views.teacherreg),
 ]

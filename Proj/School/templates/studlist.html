@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Log in </title>
+  <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,20 +19,29 @@
   </header>
   <main>
     <div class="container">
-        <form action="" method="POST">
-            {% csrf_token%}
-            <br><br>
-            <h1>Log in</h1><br>
-            <label for="">Username</label><br><input type="text" name="uname"><br>
-            <label for="">password</label><br><input type="text" name="psw"><br><br>
-            <input type="submit" value="Log in">
-            <br>
-            <br>
-            <br>
-            <a href="studregform">student registration</a><br>
-        </form>
-    </div>
 
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>ACTION</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td><a href="studapp/{{i.id}}">APPROVE</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</div>
   </main>
   <footer>
     <!-- place footer here -->
